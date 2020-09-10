@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1599741707 source:c:\users\user\desktop\test\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+	"functions.h"
+
+1599741424 source:c:\users\user\desktop\test\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+	"functions.h"
+
+1599713233 c:\users\user\desktop\test\functions.h
+
+1599741707 source:c:\users\user\desktop\utn - programación\calculadora\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+	"functions.h"
+
+1599713233 c:\users\user\desktop\utn - programación\calculadora\functions.h
+
+1599741424 source:c:\users\user\desktop\utn - programación\calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+	"functions.h"
+
