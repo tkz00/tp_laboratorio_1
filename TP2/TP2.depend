@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1601507792 source:c:\users\theok\desktop\utn\utnprogramación\tp2\arrayemployees.c
+	"ArrayEmployees.h"
+
+1601507798 c:\users\theok\desktop\utn\utnprogramación\tp2\arrayemployees.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1601507787 source:c:\users\theok\desktop\utn\utnprogramación\tp2\main.c
+	"ArrayEmployees.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1601507792 source:c:\users\theok\desktop\tp2\arrayemployees.c
+	"ArrayEmployees.h"
+
+1601507798 c:\users\theok\desktop\tp2\arrayemployees.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1601507787 source:c:\users\theok\desktop\tp2\main.c
+	"ArrayEmployees.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1601664218 source:c:\users\theok\desktop\utn\tp2\arrayemployees.c
+	"ArrayEmployees.h"
+
+1601661251 c:\users\theok\desktop\utn\tp2\arrayemployees.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1601664333 source:c:\users\theok\desktop\utn\tp2\main.c
+	"ArrayEmployees.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1601664218 source:c:\users\theok\desktop\utn\utnprogramación\tp_laboratorio_1\tp2\arrayemployees.c
+	"ArrayEmployees.h"
+
+1601661251 c:\users\theok\desktop\utn\utnprogramación\tp_laboratorio_1\tp2\arrayemployees.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1601664333 source:c:\users\theok\desktop\utn\utnprogramación\tp_laboratorio_1\tp2\main.c
+	"ArrayEmployees.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
