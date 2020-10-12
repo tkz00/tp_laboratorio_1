@@ -2,47 +2,28 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="ArrayEmployees.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2953" topLine="62" />
+			<Cursor1 position="1551" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ArrayEmployees.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ArrayEmployees.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4582" topLine="58" />
+			<Cursor1 position="9768" topLine="240" />
 		</Cursor>
 		<Folding>
 			<Collapse line="35" />
 			<Collapse line="63" />
-			<Collapse line="132" />
-			<Collapse line="159" />
-			<Collapse line="217" />
-			<Collapse line="238" />
-			<Collapse line="261" />
 			<Collapse line="322" />
-			<Collapse line="342" />
-			<Collapse line="359" />
-			<Collapse line="394" />
-			<Collapse line="415" />
-			<Collapse line="429" />
-			<Collapse line="446" />
-			<Collapse line="469" />
-			<Collapse line="511" />
 			<Collapse line="568" />
 			<Collapse line="584" />
 			<Collapse line="600" />
-			<Collapse line="616" />
-			<Collapse line="634" />
-			<Collapse line="663" />
-			<Collapse line="694" />
-			<Collapse line="718" />
 			<Collapse line="742" />
-			<Collapse line="761" />
 		</Folding>
 	</File>
-	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ArrayEmployees.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1686" topLine="15" />
+			<Cursor1 position="1740" topLine="33" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
