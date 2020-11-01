@@ -72,36 +72,38 @@ void MenuFunction(LinkedList* EmployeeList)
 				break;
 			case 4:
 				status = controller_editEmployee(EmployeeList);
-				if(status == 1)
+				switch(status)
 				{
-					printf("Se ha editado el empleado correctamente.\n");
-				}
-				else if(status == 2)
-				{
-					printf("No existe un empleado con el id ingresado.\n");
-				} else if(status == 3)
-				{
-					printf("No hay empleados cargados, cargue al menos un empleado para modificar.\n");
-				}else
-				{
-					printf("Ha habido un error, no se ha podido editar el empleado.\n");
+					case 1:
+						printf("Se ha editado el empleado correctamente.\n");
+						break;
+					case 2:
+						printf("No existe un empleado con el id ingresado.\n");
+						break;
+					case 3:
+						printf("No hay empleados cargados, cargue al menos un empleado para modificar.\n");
+						break;
+					default:
+						printf("Ha habido un error, no se ha podido editar el empleado.\n");
+						break;
 				}
 				break;
 			case 5:
 				status = controller_removeEmployee(EmployeeList);
-				if(status == 1)
+				switch (status)
 				{
-					printf("Se ha eliminado el empleado correctamente.\n");
-				}
-				else if(status == 2)
-				{
-					printf("No existe un empleado con el id ingresado.\n");
-				}else if(status == 3)
-				{
-					printf("No hay empleados cargados, cargue al menos un empleado para borrar.\n");
-				}else
-				{
-					printf("Ha habido un error, no se ha podido eliminar el empleado.\n");
+					case 1:
+						printf("Se ha eliminado el empleado correctamente.\n");
+						break;
+					case 2:
+						printf("No existe un empleado con el id ingresado.\n");
+						break;
+					case 3:
+						printf("No hay empleados cargados, cargue al menos un empleado para borrar.\n");
+						break;
+					default:
+						printf("Ha habido un error, no se ha podido eliminar el empleado.\n");
+						break;
 				}
 				break;
 			case 6:
@@ -117,16 +119,17 @@ void MenuFunction(LinkedList* EmployeeList)
 				break;
 			case 7:
 				status = controller_sortEmployee(EmployeeList);
-				if(status == 1)
+				switch (status)
 				{
-					printf("Se han ordenado los empleados correctamente.\n");
-				}
-				else if(status == 2)
-				{
-					printf("No hay empleados cargados, debe haber al menos un empleado para ordenar.\n");
-				}else
-				{
-					printf("Ha habido un error, no se han podido ordenar los empleados.\n");
+					case 1:
+						printf("Se han ordenado los empleados correctamente.\n");
+						break;
+					case 2:
+						printf("No hay empleados cargados, debe haber al menos un empleado para ordenar.\n");
+						break;
+					default:
+						printf("Ha habido un error, no se han podido ordenar los empleados.\n");
+						break;
 				}
 				break;
 			case 8:
@@ -166,7 +169,7 @@ void SortMenu(LinkedList* EmployeeList)
 
 	MenuOption = getNumberBetween("Ingrese el parametro por el cual ordenar la lista\n1 - Ordenar alfabeticamente por nombre\n2 - Ordenar por horas trabajadas\n3 - Ordenar por sueldo\n", 1, 3);
 
-	order = getNumberBetween("Ingrese 0 para ordenar ascendentemente o 1 para ordenar descendentemente\n", 0, 1);
+	order = getNumberBetween("Ingrese 0 para ordenar de menor a mayor o 1 para ordenar de mayor a menor\n", 0, 1);
 
 	switch(MenuOption)
 	{
