@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1606395294 source:c:\users\user\desktop\segundo parcial laboratiorio\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1606395285 c:\users\user\desktop\segundo parcial laboratiorio\linkedlist.h
+
+1606393581 source:c:\users\user\desktop\segundo parcial laboratiorio\common.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Common.h"
+	"Contestant.h"
+
+1606393545 c:\users\user\desktop\segundo parcial laboratiorio\common.h
+	"LinkedList.h"
+
+1606396526 c:\users\user\desktop\segundo parcial laboratiorio\contestant.h
+
+1606393556 source:c:\users\user\desktop\segundo parcial laboratiorio\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Contestant.h"
+	"Menu.h"
+	"Common.h"
+
+1606393604 c:\users\user\desktop\segundo parcial laboratiorio\controller.h
+
+1606390798 c:\users\user\desktop\segundo parcial laboratiorio\menu.h
+
+1606393010 source:c:\users\user\desktop\segundo parcial laboratiorio\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Menu.h"
+	"Common.h"
+
+1606396319 source:c:\users\user\desktop\segundo parcial laboratiorio\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Contestant.h"
+
+1606398234 source:c:\users\user\desktop\segundo parcial laboratiorio\contestant.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Contestant.h"
+	"Common.h"
+
+1606393647 source:c:\users\user\desktop\segundo parcial laboratiorio\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Contestant.h"
+	"parser.h"
+	"Common.h"
+	"Menu.h"
+
+1606391214 c:\users\user\desktop\segundo parcial laboratiorio\parser.h
+
