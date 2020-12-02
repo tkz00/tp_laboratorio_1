@@ -9,12 +9,13 @@ typedef struct{
     int id;
     int YearOfBirth;
     char Name[50];
-    char Dni[9];
+    char Dni[10];
     char PresentationDate[12];
     char PresentationTheme[30];
     int FirstRoundScore;
     int SecondRoundScore;
     float AverageScore;
+    int ThirdRoundScore;
 }Contestant;
 
 Contestant* contestant_new();
@@ -47,6 +48,19 @@ int Contestant_getSecondRoundScore(Contestant* this, int* secondRoundScore);
 int Contestant_setAverageScore(Contestant* this, float avgScore);
 int Contestant_getAverageScore(Contestant* this, float* avgScore);
 
+int Contestant_setThirdRoundScore(Contestant* this, int thirdRoundScore);
+int Contestant_getThirdRoundScore(Contestant* this, int* thirdRoundScore);
+
+int Contestant_CompareByFirstScore(void* c1, void* c2);
+
+int Contestant_CompareByThirdScore(void* c1, void* c2);
+
 void printContestantFromPointer(Contestant* this);
 
-void SetScore(Contestant* this);
+void printContestantFromPointerWithScores(Contestant* this);
+
+void printContestants(LinkedList* pArrayListContestants);
+
+void printContestantsWithScores(LinkedList* pArrayListContestants);
+
+void* SetScore(void* this);

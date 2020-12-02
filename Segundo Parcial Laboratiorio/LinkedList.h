@@ -56,4 +56,6 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
 
 int ll_map(LinkedList* this, void* (*pFunc)(void* element));
 
-LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void* element));
+LinkedList* ll_filter(LinkedList* this, float a, int (*pFunc)(void*, float a));
+
+LinkedList* ll_filterV2(LinkedList* this, int a, int (*pFunc)(void*, int a));

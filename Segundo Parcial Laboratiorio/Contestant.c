@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "LinkedList.h"
 #include "Contestant.h"
 #include "Common.h"
 
@@ -46,7 +47,7 @@ Contestant* contestant_newParametros(char* strId, char* strYearOfBirth, char* Na
         Contestant_setAverageScore(newContestant, 0);
     }
 
-    printf("%s\n", newContestant->Name);
+//    printf("%s\n", newContestant->Name);
 
 //    printContestantFromPointer(newContestant);
 
@@ -167,7 +168,7 @@ int Contestant_setPresentationTheme(Contestant* this, char* presentationTheme)
     int returnValue = 0;
     if(presentationTheme != NULL && this != NULL)
     {
-        strncpy(this->PresentationTheme, presentationTheme, 50);
+        strcpy(this->PresentationTheme, presentationTheme);
         returnValue = 1;
     }
     return returnValue;
@@ -187,7 +188,7 @@ int Contestant_getPresentationTheme(Contestant* this, char* presentationTheme)
 int Contestant_setFirstRoundScore(Contestant* this, int firstRoundScore)
 {
     int retorno=0;
-	if(firstRoundScore>0 && this!=NULL)
+	if(firstRoundScore>=0 && this!=NULL)
 	{
 		this->FirstRoundScore=firstRoundScore;
 		retorno=1;
@@ -208,7 +209,7 @@ int Contestant_getFirstRoundScore(Contestant* this, int* firstRoundScore)
 int Contestant_setSecondRoundScore(Contestant* this, int secondRoundScore)
 {
     int retorno=0;
-	if(secondRoundScore>0 && this!=NULL)
+	if(secondRoundScore>=0 && this!=NULL)
 	{
 		this->SecondRoundScore=secondRoundScore;
 		retorno=1;
@@ -249,12 +250,72 @@ int Contestant_getAverageScore(Contestant* this, float* avgScore)
 	return retorno;
 }
 
+int Contestant_setThridRoundScore(Contestant* this, int thirdRoundScore)
+{
+    int retorno=0;
+	if(thirdRoundScore>=0 && this!=NULL)
+	{
+		this->ThirdRoundScore=thirdRoundScore;
+		retorno=1;
+	}
+	return retorno;
+}
+
+int Contestant_getThirdRoundScore(Contestant* this, int* thirdRoundScore)
+{
+    int retorno=0;
+	if(thirdRoundScore!=NULL && this!=NULL)
+	{
+		*thirdRoundScore=this->ThirdRoundScore;
+		retorno=1;
+	}
+	return retorno;
+}
+
+int Contestant_CompareByFirstScore(void* c1, void* c2)
+{
+    int returnValue;
+    returnValue = 1;
+    int firstContestantScore;
+    int secondContestantScore;
+    Contestant_getFirstRoundScore(c1, &firstContestantScore);
+    Contestant_getFirstRoundScore(c2, &secondContestantScore);
+    if(firstContestantScore > secondContestantScore)
+    {
+        returnValue = -1;
+    }
+    else if(firstContestantScore == secondContestantScore)
+    {
+        returnValue = 0;
+    }
+    return returnValue;
+}
+
+int Contestant_CompareByThirdScore(void* c1, void* c2)
+{
+    int returnValue;
+    returnValue = 1;
+    int firstContestantScore;
+    int secondContestantScore;
+    Contestant_getThirdRoundScore(c1, &firstContestantScore);
+    Contestant_getThirdRoundScore(c2, &secondContestantScore);
+    if(firstContestantScore > secondContestantScore)
+    {
+        returnValue = -1;
+    }
+    else if(firstContestantScore == secondContestantScore)
+    {
+        returnValue = 0;
+    }
+    return returnValue;
+}
+
 void printContestantFromPointer(Contestant* this)
 {
 	int id;
 	int YearOfBirth;
 	char Name[50];
-	char Dni[8];
+	char Dni[10];
 	char PresentationDate[20];
 	char PresentationTheme[30];
 	int FirstRoundScore;
@@ -262,33 +323,87 @@ void printContestantFromPointer(Contestant* this)
     Contestant_getId(this, &id);
     Contestant_getYearOfBirth(this, &YearOfBirth);
     Contestant_getName(this, Name);
-    printf("%s\n", Name);
+//    printf("%s\n", Name);
     Contestant_getDni(this, Dni);
     Contestant_getPresentationDate(this, PresentationDate);
     Contestant_getPresentationTheme(this, PresentationTheme);
     Contestant_getFirstRoundScore(this, &FirstRoundScore);
 
-    printf("%4d ", id);
-    printf("%8d ", YearOfBirth);
-    printf("%16s ", Name);
-	printf("%10s \n", Dni);
+    printf("%4d %8d %16s %10s %20s %20s %22d\n", id, YearOfBirth, Name, Dni, PresentationDate, PresentationTheme, FirstRoundScore);
 }
 
-void SetScore(Contestant* this)
+void printContestantFromPointerWithScores(Contestant* this)
+{
+    int id;
+	int YearOfBirth;
+	char Name[50];
+	char Dni[10];
+	char PresentationDate[20];
+	char PresentationTheme[30];
+	int FirstRoundScore;
+	int SecondRoundScore;
+	float avgScore;
+	int ThirdRoundScore;
+
+    Contestant_getId(this, &id);
+    Contestant_getYearOfBirth(this, &YearOfBirth);
+    Contestant_getName(this, Name);
+    Contestant_getDni(this, Dni);
+    Contestant_getPresentationDate(this, PresentationDate);
+    Contestant_getPresentationTheme(this, PresentationTheme);
+    Contestant_getFirstRoundScore(this, &FirstRoundScore);
+    Contestant_getSecondRoundScore(this, &SecondRoundScore);
+    Contestant_getAverageScore(this, &avgScore);
+    Contestant_getThirdRoundScore(this, &ThirdRoundScore);
+
+    printf("%4d %8d %16s %10s %20s %20s %22d %22d %18.2f %22d\n", id, YearOfBirth, Name, Dni, PresentationDate, PresentationTheme, FirstRoundScore, SecondRoundScore, avgScore, ThirdRoundScore);
+}
+
+void* SetScore(void* this)
 {
     int firstScore;
     int secondScore;
+    int thirdScore;
     float avgScore;
+    void* returnValue = NULL;
 
-    srand(time(NULL));
+//    srand(time(NULL));
 
-    secondScore = rand() % 100;
+    secondScore = rand() % 100 + 1;
+
+    thirdScore = rand() % 100 + 1;
 
     Contestant_setSecondRoundScore(this, secondScore);
 
+    Contestant_setThridRoundScore(this, thirdScore);
+
     Contestant_getFirstRoundScore(this, &firstScore);
 
-    avgScore = (float)firstScore / secondScore;
+    avgScore = firstScore + secondScore;
+
+    avgScore = (float)avgScore / 2;
 
     Contestant_setAverageScore(this, avgScore);
+
+    return returnValue;
+}
+
+void printContestants(LinkedList* pArrayListContestants)
+{
+    Contestant* pContestant;
+    for(int i = 0; i < ll_len(pArrayListContestants); i++)
+    {
+        pContestant = ll_get(pArrayListContestants, i);
+        printContestantFromPointer(pContestant);
+    }
+}
+
+void printContestantsWithScores(LinkedList* pArrayListContestants)
+{
+    Contestant* pContestant;
+    for(int i = 0; i < ll_len(pArrayListContestants); i++)
+    {
+        pContestant = ll_get(pArrayListContestants, i);
+        printContestantFromPointerWithScores(pContestant);
+    }
 }

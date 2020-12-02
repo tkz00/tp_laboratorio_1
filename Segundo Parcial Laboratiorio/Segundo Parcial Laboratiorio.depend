@@ -67,3 +67,74 @@
 
 1606391214 c:\users\user\desktop\segundo parcial laboratiorio\parser.h
 
+1606777152 source:c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\common.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Common.h"
+	"Contestant.h"
+
+1606777152 c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\common.h
+	"LinkedList.h"
+
+1606910488 c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\linkedlist.h
+
+1606911270 c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\contestant.h
+
+1606911840 source:c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\contestant.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"LinkedList.h"
+	"Contestant.h"
+	"Common.h"
+
+1606911925 source:c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Contestant.h"
+	"parser.h"
+	"Common.h"
+	"Menu.h"
+	"Controller.h"
+
+1606777152 c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\parser.h
+
+1606777152 c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\menu.h
+
+1606910482 source:c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1606846248 source:c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Contestant.h"
+	"Menu.h"
+	"Common.h"
+
+1606911334 c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\controller.h
+
+1606911484 source:c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Menu.h"
+	"Common.h"
+
+1606777152 source:c:\users\theok\desktop\tp_laboratorio_1\segundo parcial laboratiorio\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Contestant.h"
+

@@ -632,7 +632,7 @@ int ll_map(LinkedList* this, void* (*pFunc)(void* element))
     return returnValue;
 }
 
-LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*))
+LinkedList* ll_filter(LinkedList* this, float a, int (*pFunc)(void*, float a))
 {
     LinkedList* filteredList = NULL;
     void* pElement = NULL;
@@ -644,7 +644,28 @@ LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*))
         for(i=0; i<ll_len(this); i++)
         {
             pElement=ll_get(this,i);
-            if(pFunc(pElement))
+            if(pFunc(pElement, a))
+            {
+                ll_add(filteredList, pElement);
+            }
+        }
+    }
+    return filteredList;
+}
+
+LinkedList* ll_filterV2(LinkedList* this, int a, int (*pFunc)(void*, int a))
+{
+    LinkedList* filteredList = NULL;
+    void* pElement = NULL;
+    int i;
+
+    if(this != NULL && pFunc != NULL && !ll_isEmpty(this))
+    {
+        filteredList = ll_newLinkedList();
+        for(i=0; i<ll_len(this); i++)
+        {
+            pElement=ll_get(this,i);
+            if(pFunc(pElement, a))
             {
                 ll_add(filteredList, pElement);
             }

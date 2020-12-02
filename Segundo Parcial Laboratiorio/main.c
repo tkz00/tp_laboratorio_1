@@ -17,6 +17,8 @@ int main()
 {
     setbuf(stdout, 0);
 
+    srand(time(NULL));
+
     LinkedList* ContestantList = ll_newLinkedList();
 
     MenuFunction(ContestantList);
